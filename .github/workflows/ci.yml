@@ -1,0 +1,14 @@
+name: My First CI
+on: 
+    push:
+jobs:
+  test:
+   runs-on: Ubuntu-latest
+   steps:
+   - name: Get Code
+     uses: actions/checkout@v4
+   - name: Say Hello
+     run: echo "CI is working"
+   - name: Check Node
+     run: node --version
+
